@@ -76,7 +76,7 @@ namespace Calculadora
                 aa = a;
                 a = aux + aa;
                 i++;
-                return a;
+               
             }
             return 0;
         }
