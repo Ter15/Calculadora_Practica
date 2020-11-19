@@ -61,6 +61,10 @@ namespace Calculadora
                         System.Console.Write("\n \n");
                         // me tengo que esperar a que de a intro
                         break;
+                    case 0:
+                        System.Console.WriteLine("\n                  Gracias por usar la CALCULADORA DE ESTER, esperamos verle pronto.");
+                        // me tengo que esperar a que de a intro
+                        break;
 
                 }
 
