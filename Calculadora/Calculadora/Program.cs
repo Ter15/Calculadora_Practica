@@ -9,7 +9,6 @@ namespace Calculadora
             bool TerminateProgram = false;
             while (TerminateProgram == false)
             {
-                
                 UserInterface.PrintMenu();
                 int option = UserInterface.ReadUserOption();
 

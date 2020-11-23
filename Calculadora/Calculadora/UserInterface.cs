@@ -89,7 +89,8 @@ namespace Calculadora
             {
                 try
                 {
-                    int n1 = System.Convert.ToInt32(System.Console.ReadLine());
+                    char n1 = System.Convert.ToChar(System.Console.ReadLine());
+                    if ((n1 >= '0') && (n1 <= '5'))
                     return n1;
                 }
                 catch (System.Exception e)
