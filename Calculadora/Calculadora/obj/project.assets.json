@@ -8,19 +8,23 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\judit\\.nuget\\packages\\": {}
+    "C:\\Users\\bonmati20964\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\judit\\Desktop\\Ester\\DAW\\Programación\\Calculadora_Practica\\Calculadora\\Calculadora\\Calculadora.csproj",
+      "projectUniqueName": "C:\\Users\\bonmati20964\\Desktop\\repost\\Calculadora Práctica 1\\Calculadora_Practica\\Calculadora\\Calculadora\\Calculadora.csproj",
       "projectName": "Calculadora",
-      "projectPath": "C:\\Users\\judit\\Desktop\\Ester\\DAW\\Programación\\Calculadora_Practica\\Calculadora\\Calculadora\\Calculadora.csproj",
-      "packagesPath": "C:\\Users\\judit\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\judit\\Desktop\\Ester\\DAW\\Programación\\Calculadora_Practica\\Calculadora\\Calculadora\\obj\\",
+      "projectPath": "C:\\Users\\bonmati20964\\Desktop\\repost\\Calculadora Práctica 1\\Calculadora_Practica\\Calculadora\\Calculadora\\Calculadora.csproj",
+      "packagesPath": "C:\\Users\\bonmati20964\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\bonmati20964\\Desktop\\repost\\Calculadora Práctica 1\\Calculadora_Practica\\Calculadora\\Calculadora\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\judit\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\bonmati20964\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
