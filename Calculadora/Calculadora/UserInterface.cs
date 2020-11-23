@@ -7,9 +7,9 @@ namespace Calculadora
     class UserInterface
     {
         /// <summary>
-        /// This function prints the main menu
+        /// This function prints the main menu.
         /// </summary>
-        public static void PrintMenu()
+        public static void PrintMainMenu()
         {
             System.Console.ForegroundColor = ConsoleColor.Cyan;
             System.Console.WriteLine("            ------------------");
@@ -25,9 +25,9 @@ namespace Calculadora
             System.Console.Write(" Por favor, introduzca un número de la operación que desea realizar: ");
         }
         /// <summary>
-        ///  
+        ///  This function prints the base menu 2. 
         /// </summary>
-        public static void PrintMenuPower2()
+        public static void PrintLaunchPower2Menu()
         {           
             System.Console.ForegroundColor = ConsoleColor.Red;
             System.Console.WriteLine("\n                     ~~~~~~~~~~~~~~~~~~~~~~~~~");
@@ -39,6 +39,9 @@ namespace Calculadora
             System.Console.WriteLine("   El número de veces que multiplicamos la base se llama EXPONENTE. \n");
             System.Console.Write(" Por favor, introduzca el número exponente : ");
         }
+        /// <summary>
+        /// This function prints the summation menu.
+        /// </summary>
         public static void PrintMenutSummation()
         {           
             System.Console.ForegroundColor = ConsoleColor.Yellow;

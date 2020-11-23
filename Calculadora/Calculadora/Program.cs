@@ -9,13 +9,13 @@ namespace Calculadora
             bool TerminateProgram = false;
             while (TerminateProgram == false)
             {
-                UserInterface.PrintMenu();
+                UserInterface.PrintMainMenu();
                 int option = UserInterface.ReadUserOption();
 
                 switch (option)
                 {
                     case 1:
-                        UserInterface.PrintMenuPower2();
+                        UserInterface.PrintLaunchPower2Menu();
                         int number1 = System.Convert.ToInt32(UserInterface.ReadIntegerNumber());
                         Models.GetPower2(number1);
                         System.Console.Write( "El resultado es: " + System.Convert.ToDouble(Models.GetPower2(number1)));      // SOLUCIONADO // AQUI NO LOS VOY A USAR ------QUIERO 3 DECIMALES // number1.ToString("N3")
