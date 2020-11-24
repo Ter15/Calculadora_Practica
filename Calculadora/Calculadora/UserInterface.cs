@@ -13,7 +13,7 @@ namespace Calculadora
         {
             System.Console.ForegroundColor = ConsoleColor.Cyan;
             System.Console.WriteLine("            ------------------");
-            System.Console.WriteLine("              Menú principal   " + ConsoleColor.Red);
+            System.Console.WriteLine("              Menú principal   " , ConsoleColor.Red);
             System.Console.WriteLine("            ------------------");
             System.Console.ForegroundColor = ConsoleColor.White; 
             System.Console.WriteLine("1) Potencia en base 2");
@@ -53,6 +53,9 @@ namespace Calculadora
             //System.Console.WriteLine("   Por ejemplo el sumatorio de 3:  Sumatorio de 3 = 1 + 2 + 3 = 5.\n");
             System.Console.Write(" Por favor, introduzca un número entero: ");
         }
+        /// <summary>
+        /// This function prints the factorial of a number menu.
+        /// </summary>
         public static void PrintMenuFactorial()
         {
             System.Console.ForegroundColor = ConsoleColor.Green;
@@ -65,6 +68,9 @@ namespace Calculadora
             System.Console.WriteLine("    El factorial de un número entero negativo no existe. \n \n");
             System.Console.Write(" Por favor, introduzca un número entero: ");
         }
+        /// <summary>
+        /// This function prints the prime numbers menu.
+        /// </summary>
         public static void PrintMenuPrime()
         {           
             System.Console.ForegroundColor = ConsoleColor.Magenta;
@@ -78,6 +84,9 @@ namespace Calculadora
             System.Console.WriteLine("   que tienen algún divisor natural aparte de sí mismos y del 1. \n");
             System.Console.Write(" Por favor, introduzca un número entero: ");
         }
+        /// <summary>
+        /// This function prints the menu of the Fibonacci series.
+        /// </summary>
         public static void PrintMenuFibonacci()
         {          
             System.Console.ForegroundColor = ConsoleColor.Blue;
@@ -92,6 +101,14 @@ namespace Calculadora
             System.Console.Write(" El número que insertes a continuación dará el resltado de la serie Fibinacci hasta ese mismo número.");
             System.Console.Write("\n Por favor, inserta un numero entero: ");
         }
+        /// <summary>
+        /// This function reads the number that the user enters to choose the 
+        /// from the main menu.
+        /// </summary>
+        /// <returns> 
+        /// Return a number from 1 to 5 
+        /// Returns an error, because the user has entered a number or character other than 1,2,3,4 and 5.
+        /// </returns> 
         public static int ReadUserOption()
         {
             while (true)
@@ -108,6 +125,13 @@ namespace Calculadora
                 }
             }
         }
+        /// <summary>
+        /// This function reads the integers entered to perform one of the operations. 
+        /// </summary>
+        /// <returns>
+        /// Returns an integer. 
+        /// Returns an error because an actual number or a character other than a number has been entered.
+        /// </returns>
         public static int ReadIntegerNumber()
         {
             while (true)
@@ -124,9 +148,12 @@ namespace Calculadora
             }
         }
         /// <summary>
-        /// 
+        /// This function reads a real number entered by the user to perform some operation.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>
+        /// Return a real number.
+        /// Returns an error because a character other than a number has been entered.
+        ///  </returns> 
         public static double ReadDoubleNumber()
         {
             while (true)
@@ -141,6 +168,10 @@ namespace Calculadora
                     System.Console.WriteLine(" \n Has introducido un error. Por favor, vuelva a intentarlo");
                 }
             }
+        }
+        public static void PrintHead(string title, ConsoleColor color)
+        {
+           
         }
        
 

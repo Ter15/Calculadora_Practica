@@ -5,7 +5,14 @@ using System.Text;
 namespace Calculadora
 {
     class Models
-    {
+    {/// <summary>
+     /// This function calculates the exponent of 2
+     /// </summary>
+     /// <param name="number"> This parameter is the one entered by the user, which is the one you want to calculate  </param>
+     /// <returns> 
+     /// Returns the result, if the number entered is positive
+     /// Returns the result, if the number entered is negative
+     /// </returns>
         public static double GetPower2(int number)
         {
             if (number >= 0)
@@ -27,6 +34,13 @@ namespace Calculadora
                 return result;
             }
         }
+        /// <summary>
+        /// Calculates the sum of a number
+        /// </summary>
+        /// <param name="numero">this parameter is the one entered by the user, which is the one you want to calculate</param>
+        /// <returns> 
+        /// Returns the solution of the summation
+        /// </returns>
         public static int GetSummation(int numero)
         {
             int i;
@@ -37,6 +51,13 @@ namespace Calculadora
             }
             return result;
         }
+        /// <summary>
+        /// Calculate the factorial of the number.
+        /// </summary>
+        /// <param name="numero">this parameter is the one entered by the user, which is the one you want to calculate</param>
+        /// <returns>
+        /// Returns the solution of the factorial.
+        /// </returns>
         public static int GetFactorial(int numero)
         {
             int i;
@@ -47,6 +68,13 @@ namespace Calculadora
             }
             return result;
         }
+        /// <summary>
+        /// Calculate if a number is prime.
+        /// </summary>
+        /// <param name="number">this parameter is the one entered by the user, which is the one you want to calculate</param>
+        /// <returns>
+        /// Returns true if a number is prime or false if a number is not prime.
+        /// </returns>
         public static bool IsPrime(int number)
         {
             int i = 2;
@@ -60,6 +88,13 @@ namespace Calculadora
             }
             return true;
         }
+        /// <summary>
+        /// Calculate the Fibonacci series.
+        /// </summary>
+        /// <param name="number"> this parameter is the one entered by the user, which is the one you want to calculate </param>
+        /// <returns>
+        /// Returns serial numbers up to the number the user has entered.
+        /// </returns>
         public static int IsFibonacci(int number)
         {
             int a = 1;

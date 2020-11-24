@@ -4,6 +4,10 @@ namespace Calculadora
 {
     class Program
     {
+        /// <summary>
+        /// Here you control everything that has to go out on the screen and what has to be entered to do the operations.
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             bool TerminateProgram = false;
@@ -18,11 +22,8 @@ namespace Calculadora
                         UserInterface.PrintLaunchPower2Menu();
                         int number1 = System.Convert.ToInt32(UserInterface.ReadIntegerNumber());
                         Models.GetPower2(number1);
-<<<<<<< HEAD
                         System.Console.Write("El resultado es: " + System.Convert.ToDouble(Models.GetPower2(number1)));
-=======
                         System.Console.Write( "El resultado es: " + System.Convert.ToDouble(Models.GetPower2(number1)));      // SOLUCIONADO // AQUI NO LOS VOY A USAR ------QUIERO 3 DECIMALES // number1.ToString("N3")
->>>>>>> 5e85cf6f27403c3ed7f5fdb3e929251155824e9c
                         System.Console.Write("\n \n");
                         System.Console.Write("Introduzca intro para volver al Menú Principal");
                         System.Console.ReadLine();
