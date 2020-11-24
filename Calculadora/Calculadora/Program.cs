@@ -18,7 +18,7 @@ namespace Calculadora
                         UserInterface.PrintMenuPower2();
                         int number1 = System.Convert.ToInt32(UserInterface.ReadIntegerNumber());
                         Models.GetPower2(number1);
-                        System.Console.Write("El resultado es: " + System.Convert.ToDouble(Models.GetPower2(number1))); // QUIERO 3 DECIMALES
+                        System.Console.Write("El resultado es: " + System.Convert.ToDouble(Models.GetPower2(number1)));
                         System.Console.Write("\n \n");
                         System.Console.ReadLine();
                         break;
@@ -70,9 +70,6 @@ namespace Calculadora
                 }
 
             }
-
-
-
         }
     }
 }
