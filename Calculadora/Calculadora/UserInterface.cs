@@ -6,11 +6,14 @@ namespace Calculadora
 {
     class UserInterface
     {
-        public static void PrintMenu()
+        /// <summary>
+        /// This function prints the main menu.
+        /// </summary>
+        public static void PrintMainMenu()
         {
             System.Console.ForegroundColor = ConsoleColor.Cyan;
             System.Console.WriteLine("            ------------------");
-            System.Console.WriteLine("              Menú principal  ");
+            System.Console.WriteLine("              Menú principal   " + ConsoleColor.Red);
             System.Console.WriteLine("            ------------------");
             System.Console.ForegroundColor = ConsoleColor.White; 
             System.Console.WriteLine("1) Potencia en base 2");
@@ -21,7 +24,10 @@ namespace Calculadora
             System.Console.WriteLine("0) Salir del programa \n \n");
             System.Console.Write(" Por favor, introduzca un número de la operación que desea realizar: ");
         }
-        public static void PrintMenuPower2()
+        /// <summary>
+        ///  This function prints the base menu 2. 
+        /// </summary>
+        public static void PrintLaunchPower2Menu()
         {           
             System.Console.ForegroundColor = ConsoleColor.Red;
             System.Console.WriteLine("\n                     ~~~~~~~~~~~~~~~~~~~~~~~~~");
@@ -33,6 +39,9 @@ namespace Calculadora
             System.Console.WriteLine("   El número de veces que multiplicamos la base se llama EXPONENTE. \n");
             System.Console.Write(" Por favor, introduzca el número exponente : ");
         }
+        /// <summary>
+        /// This function prints the summation menu.
+        /// </summary>
         public static void PrintMenutSummation()
         {           
             System.Console.ForegroundColor = ConsoleColor.Yellow;
@@ -89,8 +98,8 @@ namespace Calculadora
             {
                 try
                 {
-                    char n1 = System.Convert.ToChar(System.Console.ReadLine());
-                    if ((n1 >= '0') && (n1 <= '5'))
+                    int n1 = System.Convert.ToInt32(System.Console.ReadLine());
+                    if ((n1 >= 0) && (n1 <= 5))
                     return n1;
                 }
                 catch (System.Exception e)
@@ -114,6 +123,10 @@ namespace Calculadora
                 }
             }
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public static double ReadDoubleNumber()
         {
             while (true)

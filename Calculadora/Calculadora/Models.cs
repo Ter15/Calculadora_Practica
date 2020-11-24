@@ -19,8 +19,8 @@ namespace Calculadora
             }
             else
             {
-                double result = 1.0;
-                for (int i = 0; i < -number; i++)
+                    double  result = 1.0;
+                for (double i = 0; i < -number; i++)
                 {
                     result /= 2;
                 }
