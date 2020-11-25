@@ -41,15 +41,26 @@ namespace Calculadora
         /// <returns> 
         /// Returns the solution of the summation
         /// </returns>
-        public static int GetSummation(int numero)
+        public static int GetSummation(int number)
         {
             int i;
             int result = 0;
-            for (i = 1; i <= numero; i++)
+            if (number <= 0)
             {
-                result += i;
+                for (i = 1; i <= number; i++)
+                {
+                    result += i;
+                }
+                return result;
             }
-            return result;
+            else
+            {
+                for (int j = 0; j <= number; j--)
+                {
+                    result += j;
+                }
+                return result;
+            }
         }
         /// <summary>
         /// Calculate the factorial of the number.
