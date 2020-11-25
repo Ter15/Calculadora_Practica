@@ -20,18 +20,18 @@ namespace Calculadora
                 {
                     case 1:
                         UserInterface.PrintLaunchPower2Menu();
-                        int number1 = System.Convert.ToInt32(UserInterface.ReadIntegerNumber());
-                        Models.GetPower2(number1);
-                        System.Console.Write("El resultado es: " + System.Convert.ToDouble(Models.GetPower2(number1)));       // SOLUCIONADO // AQUI NO LOS VOY A USAR ------QUIERO 3 DECIMALES // number1.ToString("N3")
+                        double number1 = System.Convert.ToDouble(UserInterface.ReadDoubleNumber());
+                        double n1 = Models.GetPower2(number1);
+                        System.Console.Write("El resultado es: " + n1);       // PERFECTO, SALEN CON DECIMALES PERO NECESITO EL DOUBLE  // AQUI NO LOS VOY A USAR ------QUIERO 3 DECIMALES // number1.ToString("N3")
                         System.Console.Write("\n \n");
                         System.Console.Write("Introduzca intro para volver al Menú Principal");
                         System.Console.ReadLine();
                         break;
                     case 2:
-                        UserInterface.PrintMenutSummation();
+                        UserInterface.PrintMenutSummation();   // PERFECTO. NO TOCAR.
                         int number2 = UserInterface.ReadIntegerNumber();
-                        Models.GetSummation(number2);
-                        System.Console.Write("El resultado es: " + Models.GetSummation(number2));
+                        int n2 = Models.GetSummation(number2);
+                        System.Console.Write("El resultado es: " + n2);
                         System.Console.Write("\n \n");
                         System.Console.Write("Introduzca intro para volver al Menú Principal");
                         System.Console.ReadLine();
@@ -41,8 +41,8 @@ namespace Calculadora
                         int number3 = UserInterface.ReadIntegerNumber();
                         if (number3 >= 0)
                         {
-                            Models.GetFactorial(number3);
-                            System.Console.Write("El resultado es: " + Models.GetFactorial(number3));
+                            int n3 = Models.GetFactorial(number3);
+                            System.Console.Write("El resultado es: " + n3);
                             System.Console.Write("\n \n");
                             System.Console.Write("Introduzca intro para volver al Menú Principal");
                             System.Console.ReadLine();
@@ -56,8 +56,8 @@ namespace Calculadora
                     case 4:
                         UserInterface.PrintMenuPrime();
                         int number4 = UserInterface.ReadIntegerNumber();
-                        Models.IsPrime(number4);
-                        System.Console.Write("¿El número introducido es primo? " + Models.IsPrime(number4));
+                        bool n4 = Models.IsPrime(number4);
+                        System.Console.Write("¿El número introducido es primo? " + n4);
                         System.Console.Write("\n \n");
                         System.Console.Write("Introduzca intro para volver al Menú Principal");
                         System.Console.ReadLine();
@@ -65,7 +65,8 @@ namespace Calculadora
                     case 5:  //NO SÉ COMO REALIZAR ESTE EJERCICIO
                         UserInterface.PrintMenuFibonacci();
                         int number5 = UserInterface.ReadIntegerNumber();
-                        Models.IsFibonacci(number5);
+                        int n5 = Models.IsFibonacci(number5);
+                        System.Console.Write( "Esta es la serie: " + n5);
                         System.Console.Write("\n \n");
                         System.Console.ReadLine();
                         break;
