@@ -13,14 +13,14 @@ namespace Calculadora
      /// Returns the result, if the number entered is positive
      /// Returns the result, if the number entered is negative
      /// </returns>
-        public static double GetPower2(int number)
+        public static double GetPower2(double number)
         {
             if (number >= 0)
             {
-                int result = 1;
+                double result = 1.0;
                 for (int i = 0; i < number; i++)
                 {
-                    result *= 2;
+                    result *= 2.0;
                 }
                 return result;
             }
@@ -45,7 +45,7 @@ namespace Calculadora
         {
             int i;
             int result = 0;
-            if (number <= 0)
+            if (number >= 0)
             {
                 for (i = 1; i <= number; i++)
                 {
@@ -55,7 +55,7 @@ namespace Calculadora
             }
             else
             {
-                for (int j = 0; j <= number; j--)
+                for (int j = 0; j >= number; j--)
                 {
                     result += j;
                 }
