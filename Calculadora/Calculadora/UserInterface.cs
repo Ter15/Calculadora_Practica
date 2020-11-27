@@ -11,14 +11,7 @@ namespace Calculadora
         /// </summary>
         public static void PrintMainMenu()
         {
-            PrintHead ("Menú principal", ConsoleColor.Cyan);
-            /*
-            System.Console.ForegroundColor = ConsoleColor.Cyan;
-            System.Console.WriteLine("            ------------------");
-            System.Console.WriteLine("              Menú principal   " , ConsoleColor.Red);
-            System.Console.WriteLine("            ------------------");
-            System.Console.ForegroundColor = ConsoleColor.White; 
-            */
+            PrintHead ("Menú principal", ConsoleColor.Cyan, "-", "-");
             System.Console.WriteLine("1) Potencia en base 2");
             System.Console.WriteLine("2) Sumatorio de un número");
             System.Console.WriteLine("3) Calcular el factorial de un número");
@@ -31,12 +24,8 @@ namespace Calculadora
         ///  This function prints the base menu 2. 
         /// </summary>
         public static void PrintLaunchPower2Menu()
-        {           
-            System.Console.ForegroundColor = ConsoleColor.Red;
-            System.Console.WriteLine("\n                     ~~~~~~~~~~~~~~~~~~~~~~~~~");
-            System.Console.WriteLine("                        POTENCIA EN BASE 2  ");
-            System.Console.WriteLine("                     ~~~~~~~~~~~~~~~~~~~~~~~~~\n");
-            System.Console.ForegroundColor = ConsoleColor.White;
+        {
+            PrintHead("POTENCIA EN BASE 2", ConsoleColor.Yellow, "*", "¨");
             System.Console.WriteLine("   Una potencia es el resultado de multiplicar un número por sí mismo varias veces."); 
             System.Console.WriteLine("   El número que multiplicamos se llama BASE, en este caso es 2.");
             System.Console.WriteLine("   El número de veces que multiplicamos la base se llama EXPONENTE. \n");
@@ -46,14 +35,9 @@ namespace Calculadora
         /// This function prints the summation menu.
         /// </summary>
         public static void PrintMenutSummation()
-        {           
-            System.Console.ForegroundColor = ConsoleColor.Yellow;
-            System.Console.WriteLine("\n                            ~~~~~~~~~~~~~~~");
-            System.Console.WriteLine("                               SUMATORIO  ");
-            System.Console.WriteLine("                            ~~~~~~~~~~~~~~~\n");
-            System.Console.ForegroundColor = ConsoleColor.White;
+        {
+            PrintHead("SUMATORIO", ConsoleColor.Yellow, " =", "");
             System.Console.WriteLine("   La sumatoria o sumatorio se emplea para representar la suma de muchos o infinitos sumandos.\n");
-            //System.Console.WriteLine("   Por ejemplo el sumatorio de 3:  Sumatorio de 3 = 1 + 2 + 3 = 5.\n");
             System.Console.Write(" Por favor, introduzca un número entero: ");
         }
         /// <summary>
@@ -61,11 +45,7 @@ namespace Calculadora
         /// </summary>
         public static void PrintMenuFactorial()
         {
-            System.Console.ForegroundColor = ConsoleColor.Green;
-            System.Console.WriteLine("\n                           ~~~~~~~~~~~~~~~");
-            System.Console.WriteLine("                              FACTORIAL  ");
-            System.Console.WriteLine("                           ~~~~~~~~~~~~~~~\n");
-            System.Console.ForegroundColor = ConsoleColor.White;
+            PrintHead("FACTORIAL", ConsoleColor.Yellow, "¨"," ");
             System.Console.WriteLine("    El factorial de un número entero positivo se define como el producto de ");
             System.Console.WriteLine("    todos los números naturales anteriores o iguales a él.");
             System.Console.WriteLine("    El factorial de un número entero negativo no existe. \n \n");
@@ -75,12 +55,8 @@ namespace Calculadora
         /// This function prints the prime numbers menu.
         /// </summary>
         public static void PrintMenuPrime()
-        {           
-            System.Console.ForegroundColor = ConsoleColor.Magenta;
-            System.Console.WriteLine("\n                     ~~~~~~~~~~~~~~~~~~~~~");
-            System.Console.WriteLine("                         NÚMEROS PRIMOS  ");
-            System.Console.WriteLine("                     ~~~~~~~~~~~~~~~~~~~~~\n");
-            System.Console.ForegroundColor = ConsoleColor.White;
+        {
+            PrintHead("NÚMERO PRIMO", ConsoleColor.Yellow, "*", "*");
             System.Console.WriteLine("   Un número primo es un número natural mayor que 1 que tiene");
             System.Console.WriteLine("   únicamente dos divisores positivos distintos: él mismo y el 1.");
             System.Console.WriteLine("   Por el contrario, los números compuestos son los números naturales");
@@ -91,17 +67,13 @@ namespace Calculadora
         /// This function prints the menu of the Fibonacci series.
         /// </summary>
         public static void PrintMenuFibonacci()
-        {          
-            System.Console.ForegroundColor = ConsoleColor.Blue;
-            System.Console.WriteLine("\n                                    ~~~~~~~~~~~~~~~~~~~~~");
-            System.Console.WriteLine("                                       SERIE FIBONACCI  ");
-            System.Console.WriteLine("                                    ~~~~~~~~~~~~~~~~~~~~~\n");
-            System.Console.ForegroundColor = ConsoleColor.White;
+        {
+            PrintHead("SERIE FIBONACCI", ConsoleColor.Yellow, "~", "~");
             System.Console.WriteLine("   En matemáticas, la sucesión o serie de Fibonacci hace referencia a la secuencia "); 
             System.Console.WriteLine("   ordenada de números descrita por Leonardo de Pisa, matemático italiano del siglo XIII");
             System.Console.WriteLine("                       0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144,...");
             System.Console.WriteLine("   A cada uno de los elementos de la serie se le conoce con el nombre de número de Fibonacci.\n");
-            System.Console.Write(" El número que insertes a continuación dará el resltado de la serie Fibinacci hasta ese mismo número.");
+            System.Console.Write(" El número que insertes a continuación será el número de carácteres de la serie Fibinacci.");
             System.Console.Write("\n Por favor, inserta un numero entero: ");
         }
         /// <summary>
@@ -172,39 +144,35 @@ namespace Calculadora
                 }
             }
         }
-        public static void PrintHead(string title, ConsoleColor color)
+        /// <summary>
+        /// This function gives color to the letters of the title and writes a line of characters up and down.
+        /// </summary>
+        /// <param name="title">In this parameter you enter the name of the title you want to see colored</param>
+        /// <param name="color">this parameter is to choose the color</param>
+        /// <param name="Linecharacter1">This parameter is to enter a character type that will appear on the top and bottom lines. It will appear in the even-numbered holes</param>
+        /// <param name="Linecharacter2">This parameter is to enter a character type that will appear on the top and bottom lines. It will appear in the odd-numbered holes</param>
+        public static void PrintHead(string title, ConsoleColor color, string Linecharacter1, string Linecharacter2)
         {
             int contCaracter = title.Length;
             System.Console.ForegroundColor = color;
-            for (int i = 0; i <= contCaracter + 4; i++ )
+            for (int i = 0; i <= contCaracter + 3; i++)
             {
-                System.Console.Write("-");
+                if ((i % 2) == 0)
+                    System.Console.Write(" " + Linecharacter1);
+                else
+                    System.Console.Write(" " + Linecharacter2);
             }
             System.Console.WriteLine("");
-            System.Console.WriteLine("  " + title);
-            for (int i = 0; i <= contCaracter + 4; i++)
+            System.Console.WriteLine("           " + title);
+            for (int i = 0; i <= contCaracter + 3; i++)
             {
-                System.Console.Write("-");
+                if ((i % 2) == 0)
+                    System.Console.Write(" " + Linecharacter1);
+                else
+                    System.Console.Write(" " + Linecharacter2);
             }
             System.Console.WriteLine("");
             System.Console.ResetColor();
-            /*
-            System.Console.ForegroundColor = ConsoleColor.Cyan;
-            System.Console.WriteLine("            ------------------");
-            System.Console.WriteLine("              Menú principal   ", ConsoleColor.Red);
-            System.Console.WriteLine("            ------------------");
-            System.Console.ForegroundColor = ConsoleColor.White;
-            System.Console.WriteLine("1) Potencia en base 2");
-            System.Console.WriteLine("2) Sumatorio de un número");
-            System.Console.WriteLine("3) Calcular el factorial de un número");
-            System.Console.WriteLine("4) Saber si un número es primo");
-            System.Console.WriteLine("5) Imprimir la serie de Fibonacci");
-            System.Console.WriteLine("0) Salir del programa \n \n");
-            System.Console.Write(" Por favor, introduzca un número de la operación que desea realizar: ");
-            */
         }
-
-
-
     }
 }
