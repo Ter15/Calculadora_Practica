@@ -10,30 +10,32 @@ namespace Calculadora
         /// <param name="args"></param>
         static void Main(string[] args)
         {
+            const string INTROMAIN = "  Introduzca intro para volver al Menú Principal";
+            const string LINEJUMP = "\n \n";
             bool TerminateProgram = false;
             while (TerminateProgram == false)
             {
                 UserInterface.PrintMainMenu();
                 int option = UserInterface.ReadUserOption();
-
+                
                 switch (option)
                 {
                     case 1:
                         UserInterface.PrintLaunchPower2Menu();
                         double number1 = System.Convert.ToDouble(UserInterface.ReadDoubleNumber());
                         double n1 = Models.GetPower2(number1);
-                        System.Console.Write("El resultado es: " + n1);       // PERFECTO, SALEN CON DECIMALES PERO NECESITO EL DOUBLE  // AQUI NO LOS VOY A USAR ------QUIERO 3 DECIMALES // number1.ToString("N3")
-                        System.Console.Write("\n \n");
-                        System.Console.Write("Introduzca intro para volver al Menú Principal");
+                        System.Console.Write("El resultado es: " + n1);      
+                        System.Console.Write(LINEJUMP);
+                        System.Console.Write(INTROMAIN);
                         System.Console.ReadLine();
                         break;
                     case 2:
-                        UserInterface.PrintMenutSummation();   // PERFECTO. NO TOCAR.
+                        UserInterface.PrintMenutSummation();   
                         int number2 = UserInterface.ReadIntegerNumber();
                         int n2 = Models.GetSummation(number2);
                         System.Console.Write("El resultado es: " + n2);
-                        System.Console.Write("\n \n");
-                        System.Console.Write("Introduzca intro para volver al Menú Principal");
+                        System.Console.Write(LINEJUMP);
+                        System.Console.Write(INTROMAIN);
                         System.Console.ReadLine();
                         break;
                     case 3:
@@ -43,8 +45,8 @@ namespace Calculadora
                         {
                             int n3 = Models.GetFactorial(number3);
                             System.Console.Write("El resultado es: " + n3);
-                            System.Console.Write("\n \n");
-                            System.Console.Write("Introduzca intro para volver al Menú Principal");
+                            System.Console.Write(LINEJUMP);
+                            System.Console.Write(INTROMAIN);
                             System.Console.ReadLine();
                         }
                         else
@@ -57,22 +59,26 @@ namespace Calculadora
                         UserInterface.PrintMenuPrime();
                         int number4 = UserInterface.ReadIntegerNumber();
                         bool n4 = Models.IsPrime(number4);
-                        System.Console.Write("¿El número introducido es primo? " + n4);
-                        System.Console.Write("\n \n");
-                        System.Console.Write("Introduzca intro para volver al Menú Principal");
+                        if (n4 == true)
+                            System.Console.WriteLine("El número " + number4 + " es primo");
+                        else
+                            System.Console.WriteLine("El número " + number4 + " no es primo");
+                        System.Console.Write(LINEJUMP);
+                        System.Console.Write(INTROMAIN);
                         System.Console.ReadLine();
                         break;
-                    case 5:  //NO SÉ COMO REALIZAR ESTE EJERCICIO
+                    case 5:  
                         UserInterface.PrintMenuFibonacci();
                         int number5 = UserInterface.ReadIntegerNumber();
                         int n5 = Models.IsFibonacci(number5);
-                        System.Console.Write( "Esta es la serie: " + n5);
-                        System.Console.Write("\n \n");
+                        System.Console.Write(LINEJUMP);
+                        System.Console.Write(INTROMAIN);
                         System.Console.ReadLine();
                         break;
                     case 0:
                         TerminateProgram = true;
-                        System.Console.WriteLine("\n                  Gracias por usar la CALCULADORA DE ESTER, esperamos verle pronto.");
+                        System.Console.WriteLine("\n                  ¡Gracias por usar la CALCULADORA DE ESTER!"); 
+                        System.Console.WriteLine("\n                            Esperamos verle pronto. \n");
                         System.Console.Write("Introduzca intro para salir");
                         System.Console.ReadLine();
                         break;

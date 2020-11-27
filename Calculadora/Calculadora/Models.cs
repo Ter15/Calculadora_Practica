@@ -19,18 +19,14 @@ namespace Calculadora
             {
                 double result = 1.0;
                 for (int i = 0; i < number; i++)
-                {
                     result *= 2.0;
-                }
                 return result;
             }
             else
             {
-                    double  result = 1.0;
+                double  result = 1.0;
                 for (double i = 0; i < -number; i++)
-                {
                     result /= 2;
-                }
                 return result;
             }
         }
@@ -48,17 +44,13 @@ namespace Calculadora
             if (number >= 0)
             {
                 for (i = 1; i <= number; i++)
-                {
                     result += i;
-                }
                 return result;
             }
             else
             {
                 for (int j = 0; j >= number; j--)
-                {
                     result += j;
-                }
                 return result;
             }
         }
@@ -74,9 +66,7 @@ namespace Calculadora
             int i;
             int result = 1;
             for (i = 1; i <= numero; i++)
-            {
                 result *= i;
-            }
             return result;
         }
         /// <summary>
@@ -92,9 +82,7 @@ namespace Calculadora
             while (i < number)
             {
                 if ((number % i) == 0)
-                {
                     return false;
-                }
                 i++;
             }
             return true;
@@ -108,25 +96,21 @@ namespace Calculadora
         /// </returns>
         public static int IsFibonacci(int number)
         {
-            int a = 1;
-            int aa = 0;
-            int i = 0;
-            System.Console.WriteLine(aa);
-            System.Console.WriteLine(a);
+            int n1 = 1;
+            int n2 = 0;
+            int i = 2;
+            System.Console.WriteLine(" "+n2);
+            System.Console.WriteLine(" " +n1);
 
             while (i < number)
             {
-                System.Console.WriteLine(a + aa);
-
-                int aux = aa;
-                aa = a;
-                a = aux + aa;
+                System.Console.WriteLine(" " + (n1 + n2));
+                int aux = n2;
+                n2 = n1;
+                n1 = aux + n2;
                 i++;
-               
             }
             return 0;
         }
-
-
     }
 }
