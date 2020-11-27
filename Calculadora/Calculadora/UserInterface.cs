@@ -77,12 +77,11 @@ namespace Calculadora
             System.Console.Write("\n Por favor, inserta un numero entero: ");
         }
         /// <summary>
-        /// This function reads the number that the user enters to choose the 
-        /// from the main menu.
+        /// This function reads the number that the user enters to choose the from the main menu.
         /// </summary>
         /// <returns> 
-        /// Return a number from 1 to 5 
-        /// Returns an error, because the user has entered a number or character other than 1,2,3,4 and 5.
+        /// Return a number from 0 to 5 
+        /// Returns an error, because the user has entered a number or character other than 0,1,2,3,4 and 5.
         /// </returns> 
         public static int ReadUserOption()
         {

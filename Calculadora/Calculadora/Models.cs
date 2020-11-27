@@ -94,23 +94,24 @@ namespace Calculadora
         /// <returns>
         /// Returns serial numbers up to the number the user has entered.
         /// </returns>
-        public static int IsFibonacci(int number)
+        public static string IsFibonacci(int number)
         {
             int n1 = 1;
             int n2 = 0;
             int i = 2;
-            System.Console.WriteLine(" "+n2);
-            System.Console.WriteLine(" " +n1);
-
+            string result = "";
+            result = result + " " + n2;
+            result = result+ " " + n1;
+     
             while (i < number)
             {
-                System.Console.WriteLine(" " + (n1 + n2));
+                result = result + " " + (n1 + n2);
                 int aux = n2;
                 n2 = n1;
                 n1 = aux + n2;
                 i++;
             }
-            return 0;
+            return result;
         }
     }
 }
